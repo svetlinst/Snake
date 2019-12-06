@@ -6,9 +6,15 @@
 
     public class Snake
     {
+        public const string Symbol = "*";
         private List<Coordinate> snakeBody;
         public Direction CurrentDirection { get; set; }
         public Coordinate Head { get => snakeBody.Last(); }
+
+        public IReadOnlyCollection<Coordinate> Body
+        {
+            get => this.snakeBody;
+        }
 
         public Snake()
         {
@@ -51,7 +57,7 @@
             return newCoordinate;
         }
 
-        public void Coordinate()
+        public void Move()
         {
             Coordinate currentHead = this.snakeBody.Last();
 
