@@ -6,7 +6,7 @@
 
     public class Snake
     {
-        public const string Symbol = "*";
+        public const string Symbol = "\u25A0";
         private List<Coordinate> snakeBody;
         public Direction CurrentDirection { get; set; }
         public Coordinate Head { get => snakeBody.Last(); }
